@@ -13,7 +13,7 @@ hum_model = joblib.load("hum_model.pkl")
 le = joblib.load("label_encoder.pkl")
 
 # OpenWeatherMap API
-API_KEY = "c7e47a191dedf2e4f8655e21ec5e3072"
+API_KEY = "c7e47a191dedf2e4f8655e21ec5e2004"
 
 def fetch_weather_data(city):
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
@@ -164,4 +164,5 @@ if st.button("Predict Weather Conditions"):
         html(chart_html, height=450, width=650)
 
     else:
+
         st.error("City not found or API limit reached. Please try again.")
